@@ -1,0 +1,27 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "CompNSK";
+}
+
+
+<h1>Обратная связь</h1>
+
+<form method="post" asp-controller="home" asp-action="Check">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+
+    <label asp-for="Phone"></label>
+    <input asp-for="Phone" />
+    <span asp-validation-for="Phone"></span>
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <label asp-for="Message"></label>
+    <input asp-for="Message" />
+    <span asp-validation-for="Message"></span>
+
+    <input type="submit" value="Отправить" />
+</form>

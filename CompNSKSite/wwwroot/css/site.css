@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: silver;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 80%;
+    padding: 15px 10%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    border-bottom: 2px solid #000;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 25px;
+
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+ }
+
+main {
+    width: 80%;
+    padding: 15px 10%;
+    margin: 50px 0;
+}
+
+/*Стили для услуг*/
+.screen {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    display: flex; 
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: center; /* Центрирование содержимого */
+}
+
+    /* Заголовок */
+    .screen .text-wrapper {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        font-size: clamp(32px, 4vw, 64px);
+        text-align: center;
+        padding: 20px 0;
+        color: #ffffff;
+    }
+
+    /* Контейнер для блоков */
+    .screen .view {
+        position: relative;
+        width: 90%;
+        max-width: 1439px;
+        margin: 50px auto; /* Центрирование */
+        display: grid; /* Grid для адаптивности */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Автоподстройка */
+        gap: 40px; /* Отступ между блоками */
+        padding: 20px;
+    }
+
+    /* Общие стили для карточек */
+    .screen .overlap,
+    .screen .overlap-group,
+    .screen .overlap-group-2 {
+        position: relative;
+        width: 80%;
+        height: auto;
+        min-height: 500px;
+        background-color: #7a7a7a;
+        border-radius: 35px;
+        padding: 20px; /* Внутренние отступы */
+    }
+
+    /* Заголовки карточек */
+    .screen .div,
+    .screen .text-wrapper-3,
+    .screen .text-wrapper-4 {
+        font-family: "Inter-Black", Helvetica;
+        font-weight: 900;
+        font-size: clamp(24px, 2.5vw, 32px); /* Адаптивный шрифт */
+        text-align: center;
+        color: #ffffff;
+        margin: 20px 0;
+    }
+
+    /* Текст в карточках */
+    .screen .p,
+    .screen .div-2 {
+        font-family: "Inter-Medium", Helvetica;
+        font-weight: 500;
+        font-size: clamp(18px, 2vw, 24px); /* Адаптивный шрифт */
+        color: #ffffff;
+        line-height: 1.5; /* Улучшенный межстрочный интервал */
+        padding: 0 15px;
+    }
+
+    /* Мелкий текст */
+    .screen .text-wrapper-2 {
+        font-size: clamp(16px, 1.5vw, 20px);
+    }
+/*Контакты*/
+/* Стили для label */
+main label {
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Стили для input (кроме submit) */
+main input:not([type="submit"]) {
+    width: 50%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    outline: none;
+    margin-top: 7px;
+}
+
+    /* Фокус для input (кроме submit) */
+    main input:not([type="submit"]):focus {
+        border: 1px solid #ff0000;
+    }
+
+/* Стили для кнопки submit */
+main input[type="submit"] {
+    width: 20%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 7px;
+    background: #ff6a00;
+    font-weight: bold;
+    color: #833904;
+    cursor: pointer;
+}
+
+    /* Ховер для кнопки submit */
+    main input[type="submit"]:hover {
+        background: #d96614;
+    }
+
+/* Стили для span внутри формы */
+main form span {
+    color: #ff0000;
+    font-weight: bold;
+    display: block;
+    margin: 5px 0;
+}
+/*В конце*/
+footer {
+    margin-top: 150px;
+    text-align: center;
+    width: 100%;
+    padding: 25px 0;
+    color: #fff;
+    background: #333;
+    border-top: 2px solid #000;
+}
