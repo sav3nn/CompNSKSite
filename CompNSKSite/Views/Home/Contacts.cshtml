@@ -1,19 +1,25 @@
-﻿@model Contact
+﻿@model Feedback
 @{
     ViewData["Title"] = "CompNSK";
 }
 
-
 <h1>Обратная связь</h1>
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div style="color: green; font-weight: bold;">
+        @ViewBag.SuccessMessage
+    </div>
+}
 
 <form method="post" asp-controller="home" asp-action="Check">
     <label asp-for="Name"></label>
     <input asp-for="Name" />
     <span asp-validation-for="Name"></span>
 
-    <label asp-for="Phone"></label>
-    <input asp-for="Phone" />
-    <span asp-validation-for="Phone"></span>
+    <label asp-for="Phone_Number"></label>
+    <input asp-for="Phone_Number" />
+    <span asp-validation-for="Phone_Number"></span>
 
     <label asp-for="Email"></label>
     <input asp-for="Email" />

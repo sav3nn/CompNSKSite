@@ -1,6 +1,20 @@
-﻿@{
-    ViewData["Title"] = "CompNSK";
+﻿@model List<CompNSKSite.Models.Product>
+@{
+    ViewData["Title"] = "Сборки";
 }
 
-
 <h1>Сборки</h1>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    @foreach (var item in Model)
+    {
+        <div style="flex: 1 1 30%; border: 1px solid #ccc; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h3>@item.Name</h3>
+            <p><strong>Процессор:</strong> @item.Processor</p>
+            <p><strong>Видеокарта:</strong> @item.Videocard</p>
+            <p><strong>Оперативная память:</strong> @item.Ram</p>
+            <p><strong>SSD:</strong> @item.Ssd</p>
+            <p><strong>Цена:</strong> @item.Price.ToString("C")</p>
+        </div>
+    }
+</div>
